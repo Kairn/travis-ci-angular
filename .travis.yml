@@ -17,4 +17,6 @@ deploy:
   access_key_id: AKIAJ4RBFNKGUEHY4N7A
   secret_access_key:
     secure: lL4yECpixK/X76Bv3AYWECdK4Qdayfvv4neLUu+kJ3imKWY0xTIKQXdGhxt6D5hL5OBI0tqYAWKJc+ZE/Hbn3IIRydSAwylWEl5thJjAf/KBHK7P4dmJahQr7Dt4eryvLh+b5px041wqefHNkwhgKd73eQjX1XGfxZmMe1WhU/jRJHCpHc0CklKvHex6CcR2cgIL7qzyD9DGZoLCEiwgMuq6fUv5VO3ZN/XrVl2b1hUdFeWArzA/jji1ZAK3DygfK7ju5cUWGUJ2nl8NL7wTmEkDdig76InOpexUq6eGU9f469CLsjrP0ADO+iNwFhUj+iCLWxJoheqJer46RlqSz4wz2+leioSIZZZGZHBB52TSN/nvGubeRFTgO8Sle9XD0jEph8dn97cK/j1ZeUBaAL08JJ4q7+mlRlWCqjzDjsyVIEHVgYjVv2W31GvgjnTMEh9LYJuyvIkC+JeMnfDK8C0GaR9sdMLx+Sz9DJYW+sIyZejUIZv5dbjOlrkvEpQFarWtXBbhdltiyu8KZsJt4sp8aIQ6NuVP4iqHJdJLGZqPNqXEH7r0nwyg9z6hZjem1O+5g13x6emUHXg7foad6L5VerBUvRsLuSQWNd5pyR6q5LVh49zHeY+589nvDZ048B9fwLoFy2TYc6i1MF4XxnUp+3d9eAi3Yl7tPcBubkI=
-  bucket: 'esoma-travis-angular-demo'
+  bucket: 'esoma-travis-angular-demo',
+  skip_cleanup: true
+  local_dir: 'dist/travis-ci-angular'
