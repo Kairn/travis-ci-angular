@@ -8,16 +8,22 @@ branches:
   - master
 before_script:
 - npm install -g @angular/cli
+addons:
+  sonarcloud:
+    organization: kairn-github
+    token:
+      secure: BXKcuBQ8KTQ1eE8DMryPFL7CLpdehFDrFvlI8p6ieon6MHRMZ6WcwLYA0hrXfwr5+lkIRQM6zVDuBR+NTj6wa5+Xk5aI0LlrGYGUeehHS5nuZQXdQhcHteyvfvA2ybWqisrbAd/wfL695whn+bzBikpu2iHY3BlFh0kLsVAmC3qtQpxmJNE5hUKjK8+vymKmzmqhhR/rylnPZLA1W0oXQJR6TR/AuBbw3AmlP/CM//ZKVXl7wU0F0dOJa1VB5k+7y42l8TCoq4k4Vw/AMU9ekh3/Dwq4n0ij1Bu2WSNwklu1T+QHv2gCfI01VnARaqHJn0VOBY4SmTBIgJvq5jYoFZqh3Ib4DvLERYAZUHSVSoRlPe3SXu5t8AWcSuuqBekm73/A2XoxWw3d9v13kFK1vpocyyzyluD2Q2dbvkLpQwmcDueO2MWmUPRveF/vhBkXThE9bzn8+KRJwEqwpPbw92N2mmayt9r2R+kMzVACyc89qeiC2/o6v16uKLa7ra9W4uMUJFKVIL81DwdMu8jFObV+MYVETH41qlBCbJ7EL7aqHg3g+0fT6RyjpddCf5X2jtllEiWFfe52W0eOGf8yVlovjbmO1iugjVHYY7vSoyroW04LNy2PgtxO8qDQ2ijX8Jy1N3LTQwywhqKH/6EM7rbQmnyR6wFos9Rpqj4LzBM=
 script:
 - ng lint
 - npm run test-headless
+- sonar-scanner
 - ng build --prod
 deploy:
   provider: s3
   access_key_id: AKIAJ4RBFNKGUEHY4N7A
   secret_access_key:
     secure: lL4yECpixK/X76Bv3AYWECdK4Qdayfvv4neLUu+kJ3imKWY0xTIKQXdGhxt6D5hL5OBI0tqYAWKJc+ZE/Hbn3IIRydSAwylWEl5thJjAf/KBHK7P4dmJahQr7Dt4eryvLh+b5px041wqefHNkwhgKd73eQjX1XGfxZmMe1WhU/jRJHCpHc0CklKvHex6CcR2cgIL7qzyD9DGZoLCEiwgMuq6fUv5VO3ZN/XrVl2b1hUdFeWArzA/jji1ZAK3DygfK7ju5cUWGUJ2nl8NL7wTmEkDdig76InOpexUq6eGU9f469CLsjrP0ADO+iNwFhUj+iCLWxJoheqJer46RlqSz4wz2+leioSIZZZGZHBB52TSN/nvGubeRFTgO8Sle9XD0jEph8dn97cK/j1ZeUBaAL08JJ4q7+mlRlWCqjzDjsyVIEHVgYjVv2W31GvgjnTMEh9LYJuyvIkC+JeMnfDK8C0GaR9sdMLx+Sz9DJYW+sIyZejUIZv5dbjOlrkvEpQFarWtXBbhdltiyu8KZsJt4sp8aIQ6NuVP4iqHJdJLGZqPNqXEH7r0nwyg9z6hZjem1O+5g13x6emUHXg7foad6L5VerBUvRsLuSQWNd5pyR6q5LVh49zHeY+589nvDZ048B9fwLoFy2TYc6i1MF4XxnUp+3d9eAi3Yl7tPcBubkI=
-  bucket: 'esoma-travis-angular-demo'
+  bucket: esoma-travis-angular-demo
   acl: public_read
   skip_cleanup: true
-  local_dir: 'dist/travis-ci-angular'
+  local_dir: dist/travis-ci-angular
