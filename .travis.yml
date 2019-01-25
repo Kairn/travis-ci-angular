@@ -11,7 +11,7 @@ before_script:
 script:
 - ng lint
 - npm run test-headless
-- ng build --prod --base-href https://Kairn.github.io/travis-ci-angular/
+- ng build --prod
 deploy:
   provider: s3
   access_key_id: AKIAJ4RBFNKGUEHY4N7A
