@@ -1,4 +1,4 @@
-# travis-ci-angular
-A demo project for testing the build flow of Travis CI  
-
+# Travis CI Angular
 [![Build Status](https://travis-ci.org/Kairn/travis-ci-angular.svg?branch=master)](https://travis-ci.org/Kairn/travis-ci-angular)
+
+*This is a dummy project. The purpose is to test the build flow of Travis CI with automated deployment to AWS S3 bucket.*
