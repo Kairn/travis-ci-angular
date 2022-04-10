@@ -21,7 +21,7 @@
     "@angular/platform-browser-dynamic": "~9.0.5",
     "@angular/router": "~9.0.5",
     "core-js": "^2.5.4",
-    "minimist": "^1.2.5",
+    "minimist": "^1.2.6",
     "querystringify": "^2.1.1",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
